@@ -328,6 +328,7 @@ MemCached性能监控工具
 -------------------
 
 1. memcached-tool
+-----------------
 
 	主要用於查看slab分配的情況，evction的情況。
 	https://github.com/memcached/memcached/blob/master/scripts/memcached-tool
@@ -347,6 +348,7 @@ MemCached性能监控工具
 
 
 2. memcache-top
+---------------
 
 	用于查看吞吐量和hits情况
 	https://memcache-top.googlecode.com/files/memcache-top-v0.6
@@ -368,20 +370,25 @@ MemCached性能监控工具
 	TOTAL:          0.4GB/  0.5GB           1007    1.16s   34.3K   0.2G    285.5K
 
 3. phpMemcachedAdmin 
+--------------------
 
 4. memadmin
+-----------
 
 	https://github.com/debug001/memadmin
 
 5. libmemcached
+---------------
 
 	[root@xifan-nosql packages]# wget https://launchpad.net/libmemcached/1.0/1.0.17/+download/libmemcached-1.0.17.tar.gz
 	[root@xifan-nosql libmemcached-1.0.17]# tar zxvf libmemcached-1.0.17.tar.gz  ; cd libmemcached-1.0.17
 	[root@xifan-nosql libmemcached-1.0.17]# ./configure --prefix=/usr/local/webserver/libmemcached && make && make install
-	[root@xifan-nosql libmemcached-1.0.17]# /usr/local/bin/memslap --servers=127.0.0.1:21211  -T 8 -c 128   --cfg_cmd=/usr/local/bin/config --execute_number=100000
+	[root@xifan-nosql bin]# ./memslap --servers=127.0.0.1:11213  --test=set --execute-number=100000
+        Threads connecting to servers 1
+        Took 4.261 seconds to load data
 
 
 ------
 #注意:
 ------
-	
+	* 更多功能需要进一步测试。
