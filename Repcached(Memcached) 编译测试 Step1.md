@@ -160,4 +160,4 @@ Check Repcached(Memcached) Replication:
 	* 上述测试表示，Repcached可以实现Memcached数据双向复制。
 	* 测试发现，Repcached中Master、Slave任何一个挂了，都能正常提供服务。并且服务重启后会自动同步数据。
 	* 只能支持Master与Slave（两个实例中）进行数据同步，超过两个会导致数据同步失败，原因是数据复制监听端口11212会被第三个进程占用（replication: failed to initialize replication server socket），重启后无法正常监听数据同步端口。
-	* Repcached稳定性、大数据写入并发性、Repcliation数据一直性等场景还需要测试。
+	* Repcached稳定性、大数据写入并发性、Repcliation数据一直性等[场景测试](https://github.com/debug001/devops/blob/master/Repcached\(Memcached\)%20%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20Step%202.md)。

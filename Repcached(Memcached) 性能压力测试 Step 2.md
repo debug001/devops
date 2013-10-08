@@ -3,7 +3,7 @@ Repcached(Memcached) mcperf性能压力测试 Step 2
 
 概述:
 ------
-1. 首先完成[Repcached(Memcached)编译测试 Step 1](https://github.com/debug001/devops/blob/master/Repcached(Memcached)%20%E7%BC%96%E8%AF%91%E6%B5%8B%E8%AF%95%20Step1.md)。
+1. 首先完成[Repcached(Memcached)编译测试 Step 1](https://github.com/debug001/devops/blob/master/Repcached\(Memcached\)%20%E7%BC%96%E8%AF%91%E6%B5%8B%E8%AF%95%20Step1.md)。
 2. 原生Memcached和Repcached基准测试数据对比（1k-10k)压测。
 3. 使用Mcperf、Memslap。
 	简介：
@@ -374,7 +374,7 @@ MemCached性能监控工具
 	[root@xifan-nosql libmemcached-1.0.17]# ./configure --prefix=/usr/local/webserver/libmemcached && make && make install
 	[root@xifan-nosql libmemcached-1.0.17]# /usr/local/bin/memslap --servers=127.0.0.1:21211  -T 8 -c 128   --cfg_cmd=/usr/local/bin/config --execute_number=100000
 
-	
+
 ------
 #注意:
 ------
