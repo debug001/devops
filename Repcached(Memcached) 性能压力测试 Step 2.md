@@ -238,6 +238,7 @@ Repcached(Memcached) mcperf性能压力测试 Step 2
 	END
 
 *mcperf 100并发压测
+
 	[root@xifan-nosql twemperf]# ./src/mcperf -s 127.0.0.1 -p 11211 --linger=0 --timeout=5 --conn-rate=1000 --call-rate=1000 --num-calls=10000 --num-conns=100 --sizes=u1024,10240
 	[Tue Oct  8 00:40:03 2013] mcp_conn_generator.c:64 created 0 100 of 100 connections
 	[Tue Oct  8 00:40:22 2013] mcp_conn_generator.c:94 destroyed 100 of 100 of 100 connections
@@ -324,6 +325,8 @@ Repcached(Memcached) mcperf性能压力测试 Step 2
 	Net I/O: bytes 5.3 GB rate 243207.8 KB/s (1992.4*10^6 bps)
 
 MemCached性能监控工具
+-------------------
+
 1. memcached-tool
 
 	主要用於查看slab分配的情況，evction的情況。
@@ -344,6 +347,7 @@ MemCached性能监控工具
 
 
 2. memcache-top
+
 	用于查看吞吐量和hits情况
 	https://memcache-top.googlecode.com/files/memcache-top-v0.6
 	[root@xifan-nosql packages]# wget https://memcache-top.googlecode.com/files/memcache-top-v0.6
@@ -366,9 +370,11 @@ MemCached性能监控工具
 3. phpMemcachedAdmin 
 
 4. memadmin
+
 	https://github.com/debug001/memadmin
 
 5. libmemcached
+
 	[root@xifan-nosql packages]# wget https://launchpad.net/libmemcached/1.0/1.0.17/+download/libmemcached-1.0.17.tar.gz
 	[root@xifan-nosql libmemcached-1.0.17]# tar zxvf libmemcached-1.0.17.tar.gz  ; cd libmemcached-1.0.17
 	[root@xifan-nosql libmemcached-1.0.17]# ./configure --prefix=/usr/local/webserver/libmemcached && make && make install
