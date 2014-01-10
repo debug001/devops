@@ -9,7 +9,7 @@ cpuversion=`grep 'model name' /proc/cpuinfo |awk -F: '{print $2}' |uniq`
 memsum=`dmidecode -t memory | grep Size |grep MB|wc -l`
 memsize_M=`dmidecode -t memory | grep Size |grep MB|uniq |awk '{print $2}'`
 memsize=`expr $memsize_M / 1024`
-diskinfo=`fdisk -l|grep Disk| cut -d ',' -f1`
+diskinfo=`fdisk -l|grep Disk| grep  dev| cut -d ',' -f1`
 echo CPU Info :$cpuversion \* $cpusum 
 echo CPU Logic Num : $cpulogicnum
 echo MEM : ${memsize}GB \* $memsum
