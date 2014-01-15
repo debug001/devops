@@ -84,5 +84,9 @@ echo === Licence Snippets ===
 rm -rf "Licence Snippets"
 git clone https://github.com/sijk/sublime-licence-snippets.git "Licence Snippets"
 
+echo ===  "Theme - Flatland"  ===
+rm -rf  "Theme - Flatland"
+git clone git://github.com/thinkpixellab/flatland.git "Theme - Flatland"
+
 echo ==================================================
 echo Done!
